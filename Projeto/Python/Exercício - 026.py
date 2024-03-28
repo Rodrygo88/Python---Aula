@@ -1,0 +1,8 @@
+print("====== DESAFIO 026 ======")
+frase = str(input("Digite uma frase: ")).strip().upper()
+vezes = frase.count("A")
+primeiro = frase.find("A")
+ultima = frase.rfind("A")
+print("A letra ""A"" aparece {} vezes.".format(vezes))
+print("A primeira letra ""A"" aparece na posição {}".format(primeiro+1))
+print("A primeira letra ""A"" aparece na posição {}".format(ultima+1))

@@ -1,0 +1,5 @@
+print("====== DESAFIO 015 ======")
+km = float(input("Quantos Km rodados? "))
+dias = int(input("Quantos dias alugado? "))
+preco = (km*0.15)+(dias*60)
+print("O valor do aluguel do carro ficou em R${:.1f}".format(preco))

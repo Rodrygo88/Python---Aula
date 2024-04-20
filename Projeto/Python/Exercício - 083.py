@@ -1,25 +1,22 @@
 print("====== DESAFIO 083 ======")  
 
-expressão = str(input("Digite a sua expressão: ")).strip()
+expressao = str(input("Digite a sua expressão: ")).strip()
 
-cont1 = 0
-cont2 = 0
+cont_abertos = 0
+cont_fechados = 0
 
-print(expressão)
-
-for digito in expressão:
-
+for digito in expressao:
     if digito == "(":
-        cont1 += 1
-    else:
-        if digito == ")":
-            if cont1 >= cont2 and cont1 != 0:
-                cont2 += 1
-        
+        cont_abertos += 1
+    elif digito == ")":
+        if cont_abertos > 0:  
+            cont_fechados += 1
+            cont_abertos -= 1  
+        else:
+            cont_fechados += 100  
+            break
 
-
-if cont1 == cont2:
-    print("CORRETO!")
-
+if cont_abertos == 0 and cont_fechados < 100:  
+    print("Ok")
 else:
-    print("ERRADO!!!")
+    print("Erro")

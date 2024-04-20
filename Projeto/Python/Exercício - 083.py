@@ -20,3 +20,27 @@ if cont_abertos == 0 and cont_fechados < 100:
     print("Ok")
 else:
     print("Erro")
+
+
+"""
+###RESPOSTA AULA
+
+expr = str(input("Digite a sua expressão: "))
+
+pilha = []
+
+for simb in expr:
+    if simb == "(":
+        pilha.append("(")
+    elif simb == ")":
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(")")
+            break
+
+if len(pilha) == 0:
+    print("Válida!")
+    
+else:
+    print("Inválida!")"""

@@ -1,0 +1,50 @@
+print("====== DESAFIO 084 ======") 
+ 
+lista = []
+pessoa = []
+cont_pessoas = 0
+maior_peso = ""
+menor_peso = ""
+
+while True:
+
+    nome = str(input("Nome: ")).strip()
+    peso = float(input("Peso: "))
+    pessoa.append(nome)
+    pessoa.append(peso)
+    
+    lista.append(pessoa[:])
+    pessoa.clear()
+
+    if cont_pessoas == 0:
+        maior_peso = peso
+        menor_peso = peso
+
+    cont_pessoas += 1
+
+    if peso > maior_peso:
+        maior_peso = peso
+
+    if peso < menor_peso:
+        menor_peso = peso
+
+    opção = str(input("Quer continuar: [S/N] ")).strip().upper()[0]
+
+    if opção == "N":
+        break
+
+print(f"Foram cadastradas {cont_pessoas} pessoas.")
+
+print(f"O maior peso foi de {maior_peso}: ", end=" ")
+
+for p in lista:
+    if p[1] == maior_peso:
+        print(p[0], end=" ")
+
+print("")
+
+print(f"O menor peso foi de {menor_peso}: ", end=" ")
+
+for p in lista:
+    if p[1] == menor_peso:
+        print(p[0], end=" ")

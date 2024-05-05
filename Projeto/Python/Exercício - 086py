@@ -1,0 +1,23 @@
+print("====== DESAFIO 086 ======") 
+lista = []
+
+cont1= 0
+cont2= 0
+
+for c in range(0, 9):
+    valor = int(input(f"Valor para a posição [{cont1}, {cont2}]: "))
+    lista.append(valor)
+
+    cont2 +=1
+
+    if c == 2 or c == 5:
+        cont1+= 1
+        cont2 -= 3
+    
+
+
+
+for i, c in enumerate(lista):
+    print(f"[ {c} ]", end="")
+    if i == 2 or i == 5 or i == 8:
+        print("") 

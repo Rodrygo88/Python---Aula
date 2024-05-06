@@ -11,7 +11,7 @@ quantos = int(input("Quantos jogos você quer que eu sorteie? "))
 for c in range(0, quantos):
     jogo.clear()
     while len(jogo) < 6:
-        num = random.randint(1, 100)
+        num = random.randint(1, 60)
         if num not in jogo:
             jogo.append(num)
 
@@ -21,6 +21,6 @@ for c in range(0, quantos):
 print(f"Sorteando {quantos} JOGOS!!!")
 for i, c in enumerate(jogos):
     print(f"Jogo {i+1}: {c}")
-    time.sleep(2)
+    time.sleep(1)
 
 print("FIM")

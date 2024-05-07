@@ -2,6 +2,7 @@ print("====== DESAFIO 084 ======")
  
 lista = []
 pessoa = []
+
 cont_pessoas = 0
 maior_peso = ""
 menor_peso = ""

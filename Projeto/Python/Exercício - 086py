@@ -15,6 +15,6 @@ for c in range(0, 9):
         cont2 -= 3
 
 for i, c in enumerate(lista):
-    print(f"[ {c} ]", end="")
+    print(f"[ {c:^5} ]", end="")
     if i == 2 or i == 5 or i == 8:
         print("") 

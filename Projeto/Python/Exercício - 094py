@@ -7,7 +7,12 @@ while True:
 
     pessoa = {}
     pessoa["nome"] = str(input("Nome: ")).strip()
-    pessoa["sexo"] = str(input("Sexo: [M/F] ")).strip().upper()[0]
+    while True:
+        pessoa["sexo"] = str(input("Sexo: [M/F] ")).strip().upper()[0]
+        if pessoa["sexo"] in "MF":
+            break
+        print("Erro, escolha não disponivel! ")
+        
     idade = int(input("Idade: "))
     pessoa["idade"] = idade
 
@@ -17,11 +22,14 @@ while True:
     lista_pessoas.append(pessoa.copy())
     del pessoa
 
-    opção = str(input("Continuar? [S/N] ")).strip().upper()[0]
+    while True:
+        opção = str(input("Continuar? [S/N] ")).strip().upper()[0]
+        if opção in "SN":
+            break
+        print("Erro, escolha não disponivel! ")
     if opção == "N":
         break
-
-
+    
 print(lista_pessoas)
 print("======="*2)
 

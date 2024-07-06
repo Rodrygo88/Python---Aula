@@ -1,0 +1,16 @@
+print("====== DESAFIO 102 ======") 
+ 
+def fatorial(num, op=False):
+        
+        resul = 1
+        for i in range(num, 1, -1):
+           resul = resul * i
+    
+        if op == True:
+            return resul
+        else:
+            return resul
+           
+              
+
+print(fatorial(5, True))

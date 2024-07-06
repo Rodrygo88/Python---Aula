@@ -1,2 +1,25 @@
 print("====== DESAFIO 101 ======") 
  
+import datetime
+
+def voto(nascimento):
+    atual = datetime.datetime.now()
+    data = atual.date()
+    atual = data.year
+    idade = atual - nascimento
+
+    if idade < 18:
+        return "NEGADO"
+    elif idade >= 65:
+        return "OPCIONAL"
+    else:
+        return "OBRIGATÓRIO"
+
+ano = int(input("Ano de nascimento: "))
+
+atual = datetime.datetime.now()
+data = atual.date()
+atual = data.year
+idade = atual - ano
+
+print(f"Com {idade} anos: {voto(ano)}")

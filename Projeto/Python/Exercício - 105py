@@ -1,0 +1,35 @@
+print("====== DESAFIO 105 ======") 
+
+def notas(*nota, sit=False):
+
+      if sit == True:
+            dic = {"total": 0, "maior": 0, "menor": 0, "média": 0, "situação": ""}
+      else:
+            dic = {"total": 0, "maior": 0, "menor": 0, "média": 0}
+
+      for c in range(len(nota)):
+            dic["total"] += nota[c]
+            if c == 0:
+                  dic["maior"] = nota[c]
+                  dic["menor"] = nota[c]
+
+            if nota[c] > dic["maior"]:
+                  dic["maior"] = nota[c]
+
+            if nota[c] < dic["menor"]:
+                  dic["menor"] = nota[c]
+      
+      dic["média"] = dic["total"] / len(nota)
+      if sit == True:
+            if dic["média"] < 6:
+                  dic["situação"] = "RUIM"
+            elif dic["média"] <= 7:
+                  dic["situação"] = "RAZOÁVEL"
+            elif dic["média"] <= 10:
+                  dic["situação"] = "BOM"
+
+      return dic.copy()
+
+
+resp = notas(3, 6, 10, sit=True)
+print(resp)

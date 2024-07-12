@@ -27,9 +27,11 @@ def notas(*nota, sit=False):
                   dic["situação"] = "RAZOÁVEL"
             elif dic["média"] <= 10:
                   dic["situação"] = "BOM"
+      
+      dic["total"] = len(dic)
 
       return dic.copy()
 
 
-resp = notas(3, 6, 10, sit=True)
+resp = notas(5.5, 9.5, 10, 6.5, sit=False)
 print(resp)

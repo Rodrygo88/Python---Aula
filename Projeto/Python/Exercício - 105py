@@ -1,7 +1,9 @@
 print("====== DESAFIO 105 ======") 
 
 def notas(*nota, sit=False):
-
+      '''
+            Regras... da função!!!
+      '''
       if sit == True:
             dic = {"total": 0, "maior": 0, "menor": 0, "média": 0, "situação": ""}
       else:

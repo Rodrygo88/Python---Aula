@@ -1,9 +1,12 @@
+print("====== DESAFIO 106 ======") 
+
 def ajuda(comando):
     print("\033[1;32m") 
     help(comando)
     print("\033[m") 
 
-print("\033[1;31m====== DESAFIO 106 ======\033[m") 
+
+
 comando = "Inicio"
 while comando != "FIM":
     comando = input("Comando: ")

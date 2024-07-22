@@ -7,12 +7,16 @@ def ficha(nome="<desconhecido>", gols="0"):
 
 jogador = str(input("Nome do Jogador: "))
 quant_gols = str(input("Número de Gols: "))
+if quant_gols.isnumeric():
+      quant_gols = int(quant_gols)
+else:
+      quant_gols = 0
 
 
 if len(jogador) ==  0:
       ficha(gols = quant_gols)
 
-elif len(quant_gols) ==  0:
+elif len(str(quant_gols)) ==  0:
       ficha(nome = jogador)
       
 else:

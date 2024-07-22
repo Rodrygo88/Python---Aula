@@ -1,6 +1,7 @@
 print("====== DESAFIO 102 ======") 
  
 def fatorial(num, op=False):
+        
         """
         --> Calcula o Fatorial de um número!
         num = número
@@ -19,12 +20,10 @@ def fatorial(num, op=False):
 
            resul = resul * i
 
-    
-            
-        
-        return resul
-           
-              
 
-print(fatorial(5, True))
+
+
+        return resul
+
+print(fatorial(5))
 help(fatorial)

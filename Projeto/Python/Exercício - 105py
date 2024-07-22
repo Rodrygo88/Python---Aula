@@ -35,5 +35,5 @@ def notas(*nota, sit=False):
       return dic.copy()
 
 
-resp = notas(5.5, 9.5, 10, 6.5, sit=False)
+resp = notas(5.5, 9.5, 10, 6.5, sit=True)
 print(resp)

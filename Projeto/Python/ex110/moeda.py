@@ -49,5 +49,19 @@ def moeda(valor):
     formatado = formatado.replace(".",",")
     return formatado
 
-def resumo(valor):
 
+
+def resumo(valor, aum, dim):
+    print("==="*10)
+    print("RESUMO DO VALOR".center(30))
+    print("==="*10)
+
+    print(f"A metade: {metade(valor, True):^20}")
+
+    print(f"O dobro: {dobro(valor, True):^20}")
+
+    print(f"{aum}% de aumento: {aumentar(valor, aum, True):^20}")
+
+    print(f"{dim}% de redução: {diminuir(valor, dim, True):^20}")
+
+    print("==="*10)

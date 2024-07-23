@@ -49,4 +49,5 @@ def moeda(valor):
     formatado = formatado.replace(".",",")
     return formatado
 
+def resumo(valor):
 

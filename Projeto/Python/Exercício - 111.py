@@ -1,8 +1,8 @@
 print("====== DESAFIO 111 ======")
 
-from ex111 import moeda
+import ex111.utilidades.moeda.moeda
 
 p = float(input("Valor: R$"))
-moeda.resumo(p, 80, 35)
+ex111.utilidades.moeda.moeda.resumo(p, 35, 22)
 
 

@@ -13,7 +13,7 @@ def leiaInt(texto="Digite um número inteiro: "):
 def leiaFloat(texto="Digite um número float: "):
       while True:
             try:
-                  digito = float(input(texto))
+                  digito = float(input(texto)) 
             except:
                   print("ERRO")
             else:
